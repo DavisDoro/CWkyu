@@ -6,12 +6,21 @@ using System.Threading.Tasks;
 
 namespace CWkyu
 {
-    internal class TwoSum
+    public class TwoSum
     {
-        public static int[] TwoSum(int[] numbers, int target)
+        public static int[] TwoSum2(int[] numbers, int target)
         {
-
-            return new int[] { };
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                for (int j = 0; j < numbers.Length; j++)
+                {
+                    if (numbers[j] + numbers[i] == target)
+                    {
+                        return new int[] { i, j };
+                    }
+                }
+            }
+            return new int[0];
         }
     }
 }

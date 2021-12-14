@@ -21,7 +21,7 @@ public class Rot13
 			byte coder = 13;
 			byte asciiNumbers = 232;
 			byte[] asciiMessage = System.Text.Encoding.ASCII.GetBytes(message);
-			byte[] codedMessage = new byte[message.Length];
+			int[] codedMessage = new int[message.Length];
 
             for (int i = 0; i < message.Length; i++)
             {
@@ -29,12 +29,13 @@ public class Rot13
                 {
 					codedMessage[i] = asciiMessage[i] - asciiNumbers;
                 }
-				else
+				elseyellow
                 {
 					codedMessage[i] = asciiMessage[i] + coder;
                 }
             }
-			var rot13 = System.Text.Encoding.ASCII.GetString(codedMessage);
+			byte[] result = new byte[codedMessage.Length * sizeof(int)];
+			var rot13 = System.Text.Encoding.ASCII.GetString(result);
 			return rot13;
 		}
 	}

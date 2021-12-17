@@ -17,8 +17,7 @@ public class TenMinuteWalk
     {
 
     }
-
-    public void Calculation(string[] walk)
+    public bool Calculation(string[] walk)
     {
         int n = 0;
         int s = 0;
@@ -53,4 +52,5 @@ public class TenMinuteWalk
         }
         return false;
     }
+
 }

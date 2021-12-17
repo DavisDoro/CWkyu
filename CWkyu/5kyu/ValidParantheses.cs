@@ -9,29 +9,30 @@ public class ValidP
 
     public ValidP()
     {
-        public static bool ValidParentheses(string input)
+       
+    }
+    public bool ValidParentheses(string input)
+    {
+        int open = 0;
+        if (input[0] == ')')
         {
-            int open = 0;
-            if (input[0] == ')')
+            return false;
+        }
+        for (int i = 0; i < input.Length; i++)
+        {
+            if (open < 0)
             {
                 return false;
             }
-            for (int i = 0; i < input.Length; i++)
+            if (input[i] == '(')
             {
-                if (open < 0)
-                {
-                    return false;
-                }
-                if (input[i] == '(')
-                {
-                    open++;
-                }
-                else if (input[i] == ')')
-                {
-                    open--;
-                }
+                open++;
             }
-            return open == 0;
+            else if (input[i] == ')')
+            {
+                open--;
+            }
         }
+        return open == 0;
     }
 }

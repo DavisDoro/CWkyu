@@ -15,28 +15,29 @@ public class Rot13
 
 	public Rot13()
 	{
-		public static string Rot13(string message)
-		{
-			message = message.ToLower();
-			byte coder = 13;
-			byte asciiNumbers = 232;
-			byte[] asciiMessage = System.Text.Encoding.ASCII.GetBytes(message);
-			int[] codedMessage = new int[message.Length];
+		
+	}
+	public string Rot13Method(string message)
+	{
+		message = message.ToLower();
+		byte coder = 13;
+		byte asciiNumbers = 232;
+		byte[] asciiMessage = System.Text.Encoding.ASCII.GetBytes(message);
+		int[] codedMessage = new int[message.Length];
 
-            for (int i = 0; i < message.Length; i++)
-            {
-				if (asciiMessage[i] + 13 > 122)
-                {
-					codedMessage[i] = asciiMessage[i] - asciiNumbers;
-                }
-				elseyellow
-                {
-					codedMessage[i] = asciiMessage[i] + coder;
-                }
-            }
-			byte[] result = new byte[codedMessage.Length * sizeof(int)];
-			var rot13 = System.Text.Encoding.ASCII.GetString(result);
-			return rot13;
+		for (int i = 0; i < message.Length; i++)
+		{
+			if (asciiMessage[i] + 13 > 122)
+			{
+				codedMessage[i] = asciiMessage[i] - asciiNumbers;
+			}
+			else
+			{
+				codedMessage[i] = asciiMessage[i] + coder;
+			}
 		}
+		byte[] result = new byte[codedMessage.Length * sizeof(int)];
+		var rot13 = System.Text.Encoding.ASCII.GetString(result);
+		return rot13;
 	}
 }

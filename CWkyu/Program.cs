@@ -10,3 +10,8 @@ string message = diamond.Print(diamondCount);
 
 Console.WriteLine(message);
 
+//this is main to new branch
+for (int i = 0; i < message.Length; i++)
+{
+
+}

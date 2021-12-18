@@ -9,5 +9,6 @@ namespace CWkyu.testFolder
     internal class BrachTest
     {
         public int MyProperty { get; set; }
+        public string ChangesInBranchBasedOnMaster { get; set; }
     }
 }

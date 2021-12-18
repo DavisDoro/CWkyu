@@ -3,15 +3,19 @@ using CWkyu._6kyu;
 
 Console.WriteLine("Hello, World!");
 
-GiveMeADiamond diamond = new GiveMeADiamond();
+//GiveMeADiamond diamond = new GiveMeADiamond();
 
-int diamondCount = 23;
-string message = diamond.Print(diamondCount);
+//int diamondCount = 23;
+//string message = diamond.Print(diamondCount);
 
-Console.WriteLine(message);
+//Console.WriteLine(message);
 
 //this is main to new branch
-for (int i = 0; i < message.Length; i++)
-{
+//for (int i = 0; i < message.Length; i++)
+//{
 
-}
+//}
+string thisString = "aabbcde";
+int multiples = CountingDuplicates.DublicateCount(thisString);
+
+Console.WriteLine(multiples);

@@ -1,21 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using CWkyu._5kyu;
 using CWkyu._6kyu;
 
 Console.WriteLine("Hello, World!");
+int[] dice = new int[] { 4, 4, 4, 3, 3};
+GreedIsGood rollDice = new GreedIsGood();
 
-//GiveMeADiamond diamond = new GiveMeADiamond();
 
-//int diamondCount = 23;
-//string message = diamond.Print(diamondCount);
 
-//Console.WriteLine(message);
-
-//this is main to new branch
-//for (int i = 0; i < message.Length; i++)
-//{
-
-//}
-string thisString = "aabbcde";
-int multiples = CountingDuplicates.DublicateCount(thisString);
-
-Console.WriteLine(multiples);
+Console.WriteLine(rollDice.Score(dice));

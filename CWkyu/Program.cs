@@ -3,9 +3,10 @@ using CWkyu._5kyu;
 using CWkyu._6kyu;
 
 Console.WriteLine("Hello, World!");
-int[] dice = new int[] { 4, 4, 4, 3, 3};
-GreedIsGood rollDice = new GreedIsGood();
 
 
+int intValue = 255;
 
-Console.WriteLine(rollDice.Score(dice));
+string hexValue = intValue.ToString("X");
+
+Console.WriteLine(hexValue);
